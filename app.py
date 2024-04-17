@@ -13,7 +13,7 @@ def original():
 
 @app.route('/spread/<int:page>')
 def spread(page):
-    page_template = f'spread{page}.html'
+    page_template = f'spread_{page}.html'
     return render_template(page_template) 
 
 @app.route('/type')
