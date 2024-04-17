@@ -6,9 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/original')
+@app.route('/origin')
 def original():
-    return render_template('original.html')  
+    return render_template('origin.html')  
 @app.route('/spread')
 def spread():
     return render_template('spread.html') 
