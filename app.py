@@ -11,9 +11,10 @@ def home():
 def original():
     return render_template('origin.html')  
 
-@app.route('/spread')
-def spread():
-    return render_template('spread.html') 
+@app.route('/spread/<int:page>')
+def spread(page):
+    page_template = f'spread{page}.html'
+    return render_template(page_template) 
 
 @app.route('/type')
 def type():
