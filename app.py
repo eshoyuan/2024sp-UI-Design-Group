@@ -27,15 +27,18 @@ def original():
     return render_template('origin.html')
 
 
-@app.route('/spread')
-def spread():
-    return render_template('spread.html')
-
+@app.route('/spread/<int:page>')
+def spread(page):
+    page_template = f'spread_{page}.html'
+    return render_template(page_template) 
 
 @app.route('/type')
 def type():
     return render_template('type.html')
-
+  
+@app.route('/type2')
+def type2():
+    return render_template('type2.html') 
 
 @app.route('/quiz/<id>')
 def quiz(id):

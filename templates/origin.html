@@ -1,21 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tea Culture Learning Platform</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="../static/css/origin.css">
+    <style>
+        @media (max-width: 768px) {
+            .main-img {
+                position: relative;
+                top: 0;
+            }
+
+            .col-md-5 {
+                position: relative;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <!-- Navigation bar -->
     {% include 'navbar.html' %}
     {% block content %}
-        <h1>This is origin page</h1>
-        <p>This is the content of the origin page.</p>
+
+
+    <div class="row subtitle">
+        <div class="col-auto ">
+            <h1>
+                Historical Origins
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-auto">
+                <div class="row justify-content-center main-content-container" style="width: 90% ; margin: auto;">
+                    <div class="col-md-6">
+                        <img class="main-img"
+                            src="https://revistathc.com/wp-content/uploads/2020/12/shen-nung-c2800-bc-granger.jpg"
+                            alt="Shennong" style="width: 75%; height: auto; position: relative; top: 10px;">
+                    </div>
+                    <div class="col-md-6" style="position: relative; left: -80px; top: -10px; width: 50%;">
+                        <span class="title">
+                            Shen Nong and Tea's discovery
+                        </span>
+                        <p class="detail" style="display: inline;"> Tea's history dates back to <span
+                                class="italic">2737 BC</span></p>
+                        <div class="detail">
+                            <span>
+                                attributed to Emperor <span class="italic">Shen Nong</span>(Pic from left), who is said
+                                to have discovered
+                                tea when leaves from a wild tree blew into his pot of boiling water.
+                                <br><br>
+                                Initially used for medicinal purposes, tea leaves were consumed for their health
+                                benefits. The earliest recorded use of tea as a beverage is found in the 3rd century AD
+                                in a medical
+                                text by <span class="italic">Hua Tuo</span>.
+                                <br><br>
+                                Known for its rich aromas, diverse flavors, and deep cultural significance, the history
+                                of
+                                Chinese tea is rooted in millennia of agricultural craftsmanship and ritual.
+                                <br>
+                                The tea culture in China is celebrated for its ceremonial tea practices, including the
+                                famed Gongfu tea ceremony, which involves a precise and mindful preparation of tea,
+                                symbolizing the Chinese philosophy of <span class="italic">"harmony and respect."</span>
+                                <br>
+                                <span class="highlight">China's tea culture</span> not only illustrates its profound
+                                historical roots but also highlights its role as a global influencer in tea cultivation
+                                and
+                                consumption, shaping tea traditions around the world. With its blend of tradition and
+                                continuous innovation, Chinese tea remains a cornerstone of social gatherings and a
+                                serene
+                                companion to personal reflection, appealing to tea lovers globally.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mt-4">
+        <button class="btn continue-btn" style="position: relative; left: 45%;"
+            onclick="location.href='/home'">Home</button>
+        <button class="btn continue-btn" style="position: relative; left: 50%;" onclick="location.href='/spread/1'">Look
+            to Spread</button>
+
+    </div>
+
+    <div class="row subtitle">
+        <div class="col-auto ">
+            <h1>
+                Teas that you might interest in:
+            </h1>
+        </div>
+    </div>
+
+    <!-- <div class="row" style="display: flex; justify-content: center; align-items: center;">
+            <div class="col-3">
+                <div class="food-item">
+                    <a href="/view/1">
+                        <img src="https://img-qn-4.51miz.com/preview/photo/00/01/69/48/P-1694874-B5CCA44A.jpg" alt="Cheung Fun">
+                        <div class="food-item-name">Cheung Fun</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="food-item">
+                    <a href="/view/2">
+                        <img src="https://img-qn-4.51miz.com/preview/photo/00/01/69/49/P-1694917-760358B2.jpg" alt="Shrimp Dumplings">
+                        <div class="food-item-name">Shrimp Dumplings</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="food-item">
+                    <a href="/view/3">
+                        <img src="https://imgs-ali.51miz.com/vcg/image/without_watermark/VCG41N684070860.jpg" alt="Spring Rolls">
+                        <div class="food-item-name">Spring Rolls</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="food-item">
+                    <a href="/view/4">
+                        <img src="http://k.sinaimg.cn/n/sinakd20200827ac/313/w690h423/20200827/23a2-iyhvyva1987816.jpg/w700d1q75cms.jpg" alt="Beef Offal">
+                        <div class="food-item-name">Beef Offal</div>
+                    </a>
+                </div>
+            </div>
+        </div> -->
     {% endblock %}
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 
+</html>
