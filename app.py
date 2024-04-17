@@ -17,7 +17,10 @@ def spread():
 
 @app.route('/type')
 def type():
-    return render_template('type.html') 
+    return render_template('type.html')
+@app.route('/type2')
+def type2():
+    return render_template('type2.html') 
 
 @app.route('/quiz')
 def quiz():
