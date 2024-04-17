@@ -8,27 +8,24 @@
     <link rel="stylesheet" href="../static/css/type.css">
 
 </head>
+<script>
+	var teas = {{teas|tojson}};
+</script>
 <body>
     <!-- Navigation bar -->
     {% include 'navbar.html' %}
     {% block content %}
     <div class="tea-container">
 
+        {% for tea in teas %}
         <div class="tea">
-          <h2>Green Tea</h2>
-          <img src="static/black.png" alt="Black Tea" />
-          <p>Features: Robust flavor, fully oxidized.</p>
-          <p>Processing: Full oxidation, drying.</p>
-          <p>Notables: Assam, Earl Grey.</p>
+          <h2>{{ tea.name }}</h2>
+          <img src="{{ tea.image }}" alt="{{ tea.name }}" />
+          <p>Features: {{ tea.features }}</p>
+          <p>Processing: {{ tea.processing }}</p>
+          <p>Notables: {{ tea.notables }}</p>
         </div>
-
-        <div class="tea">
-          <h2>Oolong Tea</h2>
-          <img src="static/white.png" alt="White Tea" />
-          <p>Features: Delicate flavor, minimally processed.</p>
-          <p>Processing: Plucked, naturally dried.</p>
-          <p>Notables: Silver Needle, White Peony.</p>
-        </div>
+        {% endfor %}
       
       </div>
       
@@ -41,4 +38,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

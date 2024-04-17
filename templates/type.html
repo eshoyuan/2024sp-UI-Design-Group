@@ -8,29 +8,25 @@
     <link rel="stylesheet" href="../static/css/type.css">
 
 </head>
+<script>
+	var teas = {{teas|tojson}};
+</script>
 <body>
     <!-- Navigation bar -->
     {% include 'navbar.html' %}
     {% block content %}
     <div class="tea-container">
 
-        <!-- Green Tea Section -->
+        {% for tea in teas %}
         <div class="tea">
-          <h2>Green Tea</h2>
-          <img src="static/Green.png" alt="Green Tea" />
-          <p>Features: Light flavor, green color, high antioxidants.</p>
-          <p>Processing: Quick heating to prevent oxidation.</p>
-          <p>Notables: Longjing, Sencha.</p>
+          <h2>{{ tea.name }}</h2>
+          <img src="{{ tea.image }}" alt="{{ tea.name }}" />
+          <p>Features: {{ tea.features }}</p>
+          <p>Processing: {{ tea.processing }}</p>
+          <p>Notables: {{ tea.notables }}</p>
         </div>
-      
-        <!-- Oolong Tea Section -->
-        <div class="tea">
-          <h2>Oolong Tea</h2>
-          <img src="static/Oolong.png" alt="Oolong Tea" />
-          <p>Features: Partially oxidized, range of flavors.</p>
-          <p>Processing: Partial oxidation, shaping.</p>
-          <p>Notables: Tieguanyin, Da Hong Pao.</p>
-        </div>
+        {% endfor %}
+    
       
       </div>
       

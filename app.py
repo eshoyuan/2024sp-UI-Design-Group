@@ -12,6 +12,40 @@ quiz_questions = [
         "choices": ["AnswerA", "AnswerB", "AnswerC", "AnswerD"]
     }
 ]
+teas_type1 = [
+    {
+        "name": "Green Tea",
+        "image": "static/Green.png",
+        "features": "Light flavor, green color, high antioxidants.",
+        "processing": "Quick heating to prevent oxidation.",
+        "notables": "Longjing, Sencha."
+    },
+    {
+        "name": "Oolong Tea",
+        "image": "static/Oolong.png",
+        "features": "Partially oxidized, range of flavors.",
+        "processing": "Partial oxidation, shaping.",
+        "notables": "Tieguanyin, Da Hong Pao."
+    }
+]
+
+
+teas_type2 = [
+    {
+        "name": "Black Tea",
+        "image": "static/black.png",
+        "features": "Robust flavor, fully oxidized.",
+        "processing": "Full oxidation, drying.",
+        "notables": "Assam, Earl Grey."
+    },
+    {
+        "name": "White Tea",
+        "image": "static/white.png",
+        "features": "Delicate flavor, minimally processed.",
+        "processing": "Plucked, naturally dried.",
+        "notables": "Silver Needle, White Peony."
+    }
+]
 
 quiz_answers = ["AnswerA", "AnswerC"]
 
@@ -34,11 +68,12 @@ def spread(page):
 
 @app.route('/type')
 def type():
-    return render_template('type.html')
+    global teas
+    return render_template('type.html', teas=teas_type1)
   
 @app.route('/type2')
 def type2():
-    return render_template('type2.html') 
+    return render_template('type2.html', teas=teas_type2) 
 
 @app.route('/quiz/<id>')
 def quiz(id):
