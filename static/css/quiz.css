@@ -37,6 +37,6 @@ body {
     /* Position the image to the right of .choice */
     float: right;
     /* Add margin if necessary */
-    margin-right: 400px; /* Adjust as needed */
+    margin-right: 10%; /* Adjust as needed */
     margin-top: 20px; /* Add margin to align vertically with the content */
 }
