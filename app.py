@@ -4,13 +4,31 @@ app = Flask(__name__)
 
 quiz_questions = [
     {
-        "questions": "Question-Zero",
-        "choices": ["AnswerA", "AnswerB", "AnswerC", "AnswerD"]
+        "questions": 'Who is the author of "The Classic of Tea" (茶经) ?',
+        "choices": ["Lu Yu", "Hua Tuo", "Shen Nong", "Li Shizhen"],
+        "imageURL": "/static/book.png"
     },
     {
-        "questions": "Question-One",
-        "choices": ["AnswerA", "AnswerB", "AnswerC", "AnswerD"]
-    }
+        "questions": "In 1800s, which company began cultivating tea in India?",
+        "choices": ["British East India", "British West India", "Ito En", "Lipton"],
+        "imageURL": "/static/india.png"
+    },
+        {
+        "questions": "What is the primary difference in the processing of Green Tea and Black Tea?",
+        "choices": ["Green Tea is fully oxidized, while Black Tea is not oxidized at all.", "Black Tea is partially oxidized, while Green Tea undergoes a full oxidation process.", "Green Tea is quickly heated to prevent oxidation, while Black Tea undergoes a full oxidation process.", "There is no difference; both are processed in the same way."],
+        "imageURL": "/static/process.png"
+    },
+            {
+        "questions": "Which tea is characterized by a range of flavors due to its partial oxidation during processing?",
+        "choices": ["Black Tea", "White Tea", "Oolong Tea", "Green Tea"],
+        "imageURL": "/static/tea1.png"
+    },
+                {
+        "questions": "Which type of tea is known for its delicate flavor and minimal processing?",
+        "choices": ["Black Tea", "White Tea", "Oolong Tea", "Green Tea"],
+        "imageURL": "/static/tea2.png"
+
+    },
 ]
 teas_type1 = [
     {
@@ -47,7 +65,7 @@ teas_type2 = [
     }
 ]
 
-quiz_answers = ["AnswerA", "AnswerC"]
+quiz_answers = ["Lu Yu", "British East India",  "Green Tea is quickly heated to prevent oxidation, while Black Tea undergoes a full oxidation process.", "Oolong Tea", "White Tea"]
 
 
 @app.route('/')

@@ -14,20 +14,18 @@ document.addEventListener("DOMContentLoaded", function() {
     var correctAnswers = quiz_answers; // Assuming quiz_answers is an array of correct answers
     var score = 0;
     var resultContainer = document.getElementById("result");
-    var resultHTML = "<h2>Quiz Results</h2>";
-    resultHTML += "<ul>";
+    var resultHTML = "<h2>Quiz Results</h2><ul style='list-style: none; padding: 0; margin: 0;'>";
     for (var i = 0; i < correctAnswers.length; i++) {
-        resultHTML += "<li>Question " + (i + 1) + ": ";
+        resultHTML += "<li style='margin-bottom: 10px; font-size: large;'>Question " + (i + 1) + ": ";
         if (userChoices[i + 1] === correctAnswers[i]) {
             resultHTML += "Correct";
             score++;
         } else {
-            resultHTML += "Incorrect";
+            resultHTML += "Incorrect. Correct answer is: " + correctAnswers[i];
         }
         resultHTML += "</li>";
     }
-    resultHTML += "</ul>";
-    resultHTML += "<p>Score: " + score + "/" + correctAnswers.length + "</p>";
+    resultHTML += "</ul><p>Score: " + score + "/" + correctAnswers.length + "</p>";
     resultContainer.innerHTML = resultHTML;
 
     // Add event listener to the "Restart" button

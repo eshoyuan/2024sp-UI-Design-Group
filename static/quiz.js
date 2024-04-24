@@ -4,23 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
         // Store the selected choice and current quiz ID in sessionStorage
         sessionStorage.setItem("selectedChoice_" + id, selectedChoice);
 
-        // Log the current storage item
-        console.log("Current storage item:", sessionStorage.getItem("selectedChoice_"+id));
-        if(parseInt(id)<quiz_questions.length){
+        if(parseInt(id) < quiz_questions.length){
             // Redirect to the next quiz
             window.location.href = (parseInt(id) + 1);
-        }else{
+        } else {
             // Redirect to the results page
             window.location.href = "/result";
         }
-        
     }
 
     // Select the element where you want to display the question
     var questionElement = document.getElementById("title");
-
     // Set the question text
-    questionElement.innerText = quiz_questions[parseInt(id)-1].questions;
+    questionElement.innerText = "Question " + id + ": " + quiz_questions[parseInt(id)-1].questions;
+
+    // Set the image source
+    var questionImageElement = document.getElementById("questionImage");
+    questionImageElement.src =quiz_questions[parseInt(id)-1].imageURL;
+
 
     // Select the element where you want to display the choices
     var choicesElement = document.getElementById("contents");
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Create submit button
     var submitButton = document.createElement("button");
     submitButton.textContent = "Continue";
-    submitButton.classList.add("btn","continue-btn");
+    submitButton.classList.add("btn", "continue-btn");
     submitButton.addEventListener("click", function () {
         // Find the selected choice
         var selectedChoice = document.querySelector('input[name="choice"]:checked');
