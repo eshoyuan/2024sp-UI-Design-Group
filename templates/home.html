@@ -6,6 +6,36 @@
     <title>Tea Culture Learning Platform</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/home.css">
+    <style>
+        /* 设置内容区域的背景和内边距 */
+        .content-box {
+            background-color: #E8F5E9; /* 浅绿色背景 */
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px; /* 圆角边框 */
+        }
+
+        /* 图片的样式，使其与背景协调 */
+        .tea-image {
+            display: block;
+            margin: auto; /* 居中显示 */
+            max-width: 100%; /* 保证图片不会超出容器宽度 */
+            border-radius: 8px; /* 图片圆角 */
+        }
+
+        /* 按钮样式调整 */
+        .continue-btn {
+            background-color: #4CAF50;  /* 按钮背景色为较深绿色 */
+            color: white;  /* 文字颜色为白色 */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px; /* 按钮圆角 */
+        }
+
+        .continue-btn:hover {
+            background-color: #367B34; /* 鼠标悬停时更深的绿色 */
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation bar -->
@@ -13,18 +43,20 @@
     
     <!-- Main Content -->
     <div class="main-content">
-        <div class="welcome-message">
-            <h2>Welcome to the world of Chinese Tea! </h2>
-            <h2> Here, you can: </h2>
-            <p>Discover the rich history of Chinese Tea.</p>
-            <p>Learn to distinguish various types of tea.</p>
-            <p>Test your knowledge with a fun quiz!</p>
-            <p>Let's brew up some excitement together! ☕✨</p>
+        <div class="content-box">
+            <div class="welcome-message">
+                <h2>Welcome to the world of Chinese Tea!</h2>
+                <h2>Here, you can:</h2>
+                <p>Discover the rich history of Chinese Tea.</p>
+                <p>Learn to distinguish various types of tea.</p>
+                <p>Test your knowledge with a fun quiz!</p>
+                <p>Let's brew up some excitement together! ☕✨</p>
+            </div>
         </div>
-        <div>
+        <div class="content-box">
             <img src="{{ url_for('static', filename='home.jpg') }}" alt="Tea Leaves" class="tea-image">
         </div>
-        <div class="mt-4">
+        <div class="content-box mt-4">
             <button class="btn continue-btn" onclick="location.href='/origin'">Continue</button>
         </div>
     </div>
@@ -33,4 +65,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
