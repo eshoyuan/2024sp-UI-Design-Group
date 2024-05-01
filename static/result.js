@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Create the result table HTML
     var resultContainer = document.getElementById("result");
-    var resultHTML = "<h2>Quiz Results</h2><h3>Score: " + score + "/" + correctAnswers.length + "</h3><table><thead><tr><th>Question</th><th>Result</th><th>Correct Answer</th></tr></thead><tbody>";
+    var resultHTML = "<h2>Quiz Results</h2><table><thead><tr><th>Question</th><th>Result</th><th>Correct Answer</th></tr></thead><tbody>";
 
     for (var i = 0; i < correctAnswers.length; i++) {
         resultHTML += "<tr class='" + (userChoices[i + 1] === correctAnswers[i] ? 'correct' : 'incorrect') + "'>";
@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     resultHTML += "</tbody></table>";
+    resultHTML += "<h3>Score: " + score + "/" + correctAnswers.length + "</h3>"; // Moved this line here to update after score calculation
 
     // Set the result HTML to the container
     resultContainer.innerHTML = resultHTML;
@@ -79,4 +80,3 @@ document.addEventListener("DOMContentLoaded", function() {
     var restartButton = document.querySelector(".continue-btn");
     restartButton.addEventListener("click", redirectToHome);
 });
-
