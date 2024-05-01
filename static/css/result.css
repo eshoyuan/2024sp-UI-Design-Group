@@ -14,6 +14,11 @@ body {
 .main-content {
     text-align: center;
     padding: 2em;
+    background-color: rgb(180, 217, 181);
+    padding: 20px; /* Optional: Add padding for better spacing */
+    max-width: 80%; /* Set a maximum width */
+    margin: 0 auto; /* Center the content horizontally */
+    font-size: large;
 }
 .continue-btn {
     background-color: #4CAF50; /* Dark green color */
@@ -25,3 +30,13 @@ body {
 .contents {
     margin-bottom: 10px;
 }
+.incorrect {
+    background-color: #f88484; /* Light red background */
+    color: #602a2a; /* Red text color */
+    font-weight: bold;
+}
+.correct {
+    background-color: #e6ffe6; /* Light green background */
+    color: #004a00; /* Green text color */
+}
+

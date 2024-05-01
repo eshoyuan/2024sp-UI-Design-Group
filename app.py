@@ -29,6 +29,21 @@ quiz_questions = [
         "imageURL": "/static/tea2.png"
 
     },
+    {
+        "questions": "Who is credited with the discovery of tea, according to legend?",
+        "choices": ["Hua Tuo", "Shen Nong", "Lu Yu", "Li Shizhen"],
+        "imageURL": "/static/huatuo.png"
+    },
+    {
+        "questions": "Which famous Chinese tea ceremony symbolizes the philosophy of 'harmony and respect'?",
+        "choices": ["Matcha ceremony", "Gongfu tea ceremony", "Japanese tea ceremony", "English afternoon tea ritual"],
+        "imageURL": "/static/gongfu.png"
+    },
+    {
+    "questions": "During which dynasty did tea first reach Central Asia and the Middle East?",
+    "choices": ["Tang Dynasty", "Song Dynasty", "Ming Dynasty", "Qing Dynasty"],
+    "imageURL": "/static/tang.png"
+}
 ]
 teas_type1 = [
     {
@@ -65,7 +80,7 @@ teas_type2 = [
     }
 ]
 
-quiz_answers = ["Lu Yu", "British East India",  "Green Tea is quickly heated to prevent oxidation, while Black Tea undergoes a full oxidation process.", "Oolong Tea", "White Tea"]
+quiz_answers = ["Lu Yu", "British East India",  "Green Tea is quickly heated to prevent oxidation, while Black Tea undergoes a full oxidation process.", "Oolong Tea", "White Tea","Shen Nong","Gongfu tea ceremony","Tang Dynasty"]
 
 
 @app.route('/')

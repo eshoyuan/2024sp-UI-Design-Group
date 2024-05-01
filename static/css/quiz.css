@@ -29,7 +29,12 @@ body {
     margin: 10px;
     font-size: large;
 }
-
+.main-content {
+    background-color: rgb(180, 217, 181);
+    padding: 20px; /* Optional: Add padding for better spacing */
+    max-width: 80%; /* Set a maximum width */
+    margin: 0 auto; /* Center the content horizontally */
+}
 
 #questionImage {
     /* Set restrictions on width and height */
@@ -37,6 +42,6 @@ body {
     /* Position the image to the right of .choice */
     float: right;
     /* Add margin if necessary */
-    margin-right: 10%; /* Adjust as needed */
-    margin-top: 20px; /* Add margin to align vertically with the content */
+    /* margin-right: 10%; /* Adjust as needed */
+    /* margin-top: 20px; /* Add margin to align vertically with the content */
 }
