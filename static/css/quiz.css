@@ -28,6 +28,8 @@ body {
 .block.choice {
     margin: 10px;
     font-size: large;
+    padding-left: 70px;
+    text-align: left;
 }
 .main-content {
     background-color: rgb(180, 217, 181);
@@ -35,6 +37,12 @@ body {
     max-width: 80%; /* Set a maximum width */
     margin: 0 auto; /* Center the content horizontally */
 }
+
+.title{
+    margin-left: 50px;
+    text-align: left;
+}
+
 
 #questionImage {
     /* Set restrictions on width and height */
@@ -45,3 +53,5 @@ body {
     /* margin-right: 10%; /* Adjust as needed */
     /* margin-top: 20px; /* Add margin to align vertically with the content */
 }
+
+
